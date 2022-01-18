@@ -32,7 +32,8 @@ xc [arguments] # Options
  -a32  Force compile for arm
  -a64  Force compile for arm64
  -o     Output file name of the script to compile
- -b     Brutal CC optimizations for max binary performance                                          ~ $ xc -a32 test.sh -o test
+ -b     Brutal CC optimizations for max binary performance                         
+~ $ xc -a32 test.sh -o test
 ~ $ file test                                     test: ELF 32-bit LSB pie executable, ARM, EABI5 version 1 (SYSV), dynamically linked, interpreter /system/bin/linker, stripped
 ~ $ xc -a32 -b test.sh -o test1
 ~ $ file test1

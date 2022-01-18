@@ -34,10 +34,13 @@ xc [arguments] # Options
  -o     Output file name of the script to compile
  -b     Brutal CC optimizations for max binary performance                         
 ~ $ xc -a32 test.sh -o test
-~ $ file test                                     test: ELF 32-bit LSB pie executable, ARM, EABI5 version 1 (SYSV), dynamically linked, interpreter /system/bin/linker, stripped
+~ $ file test
+test: ELF 32-bit LSB pie executable, ARM, EABI5 version 1 (SYSV), dynamically linked, interpreter /system/bin/linker, stripped
 ~ $ xc -a32 -b test.sh -o test1
 ~ $ file test1
 test1: ELF 32-bit LSB pie executable, ARM, EABI5 version 1 (SYSV), dynamically linked, interpreter /system/bin/linker, stripped
+~ $ ./test
+Hello!
 ```
 More features will come soon with more development in this project.
 

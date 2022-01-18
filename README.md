@@ -26,12 +26,17 @@ chmod +rwx "$PWD/configure"
 
 ```
 xc [arguments] # Options
-xc -a32 myscript.sh # To create a binary for arm, output file will be generated as a.out
-xc -a32 myscript.sh -o executable.bin # Output file will be generated as executable.bin
-xc -a64 myscript.sh # To create a binary for arm64, output file will be generated as a.out
-xc -a64 myscript.sh -o executable.bin # Output file will be generated as executable.bin
-xc -v # To check XCompiler™ version
-xc -h # To get information about all given options
+~ $ xc --help
+[*] XCompiler™ v0.1 - By LOOPER (iamlooper @ github)
+[*] Usage : xc [-a arch - 32 | 64] -b (optional) <inputFileName> -o <outputFileName>                
+ -a32  Force compile for arm
+ -a64  Force compile for arm64
+ -o     Output file name of the script to compile
+ -b     Brutal CC optimizations for max binary performance                                          ~ $ xc -a32 test.sh -o test
+~ $ file test                                     test: ELF 32-bit LSB pie executable, ARM, EABI5 version 1 (SYSV), dynamically linked, interpreter /system/bin/linker, stripped
+~ $ xc -a32 -b test.sh -o test1
+~ $ file test1
+test1: ELF 32-bit LSB pie executable, ARM, EABI5 version 1 (SYSV), dynamically linked, interpreter /system/bin/linker, stripped
 ```
 More features will come soon with more development in this project.
 

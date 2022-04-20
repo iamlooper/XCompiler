@@ -11,26 +11,26 @@ Compile any shell script into a executable binary for Android
  
  **XCompiler™** is not a compiler in general. Rather, it obfuscates the original shell script and compile it using CC. Upon execution, it decrypts the code and execute it.
 
-## Setup
+## Setup (Ubuntu only)
 
 ```
 git clone https://github.com/iamlooper/XCompiler
 cd XCompiler
-chmod +rwx "$PWD/configure"
-./configure
+chmod +rwx "$PWD/setup"
+./setup
 ```
 
-**Note** : For now, only [Termux](https://f-droid.org/en/packages/com.termux/) is supported. Download it and run the above commands.
+**Note**: **XCompiler™** will only work in Ubuntu. Consider, using Ubuntu or you can try free Ubuntu SSH server [here](https://github.com/Sushrut1101/MultiLinux-SSH).
 
 ## Usage
 
 ```
 xc [arguments] # Options
 ~ $ xc --help
-[*] XCompiler™ v0.1 - By LOOPER (iamlooper @ github)
+[*] XCompiler™ v0.2 - By LOOPER (iamlooper @ github)
 [*] Usage : xc [-a arch - 32 | 64] -b (optional) <inputFileName> -o <outputFileName>                
- -a32  Force compile for arm
- -a64  Force compile for arm64
+ -a32   Compile for arm
+ -a64   Compile for arm64
  -o     Output file name of the script to compile
  -b     Brutal CC optimizations for max binary performance                         
 ~ $ xc -a32 test.sh -o test

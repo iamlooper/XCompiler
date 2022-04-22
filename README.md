@@ -18,6 +18,7 @@ git clone https://github.com/iamlooper/XCompiler
 cd XCompiler
 chmod +rwx "$PWD/setup"
 ./setup
+chmod +rwx "/usr/local/bin/xc"
 ```
 
 **Note**: **XCompiler™** will only work in Ubuntu. Consider, using Ubuntu or you can try free Ubuntu SSH server [here](https://github.com/Sushrut1101/MultiLinux-SSH).

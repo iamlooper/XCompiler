@@ -17,33 +17,30 @@ Compile any shell script into a executable binary for Android
 git clone https://github.com/iamlooper/XCompiler
 cd XCompiler
 chmod +rwx "$PWD/setup"
-./setup
-chmod +rwx "/usr/local/bin/xc"
+sudo ./setup
 ```
 
-**Note**: **XCompiler™** will only work in Ubuntu. Consider, using Ubuntu or you can try free Ubuntu SSH server [here](https://github.com/Sushrut1101/MultiLinux-SSH).
+**Note**: **XCompiler™** will only work in Ubuntu. Consider, using Ubuntu or you can try free Ubuntu SSH server [here](https://github.com/Sushrut1101/MultiLinux-SSH). Also, make sure to give `sudo` before running compiling commands. See below to get idea if you didn't understood.
 
 ## Usage
 
 ```
 xc [arguments] # Options
 ~ $ xc --help
-[*] XCompiler™ v0.2 - By LOOPER (iamlooper @ github)
+[*] XCompiler™ v0.3 - By LOOPER (iamlooper @ github)
 [*] Usage : xc [-a arch - 32 | 64] -b (optional) <inputFileName> -o <outputFileName>                
  -a32   Compile for arm
  -a64   Compile for arm64
  -o     Output file name of the script to compile
- -b     Brutal CC optimizations for max binary performance                         
-~ $ xc -a32 test.sh -o test
+~ $ sudo xc -a32 test.sh -o test
 ~ $ file test
 test: ELF 32-bit LSB pie executable, ARM, EABI5 version 1 (SYSV), dynamically linked, interpreter /system/bin/linker, stripped
-~ $ xc -a32 -b test.sh -o test1
+~ $ sudo xc -a32 -b test.sh -o test1
 ~ $ file test1
 test1: ELF 32-bit LSB pie executable, ARM, EABI5 version 1 (SYSV), dynamically linked, interpreter /system/bin/linker, stripped
 ~ $ ./test
 Hello!
 ```
-More features will come soon with more development in this project.
 
 ## Support Us
 

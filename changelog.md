@@ -1,5 +1,11 @@
 # Changelog
 
+## v0.4
+
+- Added Android 13 full support
+- Misc. changes
+- Nothing else XD
+
 ## v0.3
 
 - Written code from scratch
